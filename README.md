@@ -29,7 +29,7 @@ pip install -r requirements.txt
 ## ▶️ Running the Server
 
 ```bash
-uvicorn main:app --reload --host 0.0.0.0 --port 8000
+uvicorn app:app --reload --host 0.0.0.0 --port 8000
 ```
 
 - API Base URL: `http://localhost:8000`
@@ -61,8 +61,8 @@ Stores a policy document into the RAG system for future querying.
 
 | Code | Description |
 |------|-------------|
-| `200` | Document successfully ingested |
-| `422` | Validation Error — check request body |
+| 200 | Document successfully ingested |
+| 422 | Validation Error — check request body |
 
 **cURL Example:**
 ```bash
@@ -92,8 +92,8 @@ Ask a natural language question against all ingested documents using RAG.
 
 | Code | Description |
 |------|-------------|
-| `200` | Returns relevant document excerpts with sources |
-| `422` | Validation Error — check request body |
+| 200 | Returns relevant document excerpts with sources |
+| 422 | Validation Error — check request body |
 
 **cURL Example:**
 ```bash
@@ -116,7 +116,7 @@ curl -X POST "http://localhost:8000/query" \
 
 ## 📐 Data Schemas
 
-### DocumentInput
+**DocumentInput**
 ```json
 {
   "text": "string",
@@ -124,14 +124,14 @@ curl -X POST "http://localhost:8000/query" \
 }
 ```
 
-### QueryInput
+**QueryInput**
 ```json
 {
   "question": "string"
 }
 ```
 
-### ValidationError
+**ValidationError**
 ```json
 {
   "loc": ["string | integer"],
@@ -146,11 +146,11 @@ curl -X POST "http://localhost:8000/query" \
 
 ```
 Policy-Document-RAG-API/
-├── main.py              # FastAPI app & route definitions
-├── requirements.txt     # Python dependencies
-├── .gitignore           # Python gitignore
-├── LICENSE              # MIT License
-└── README.md            # Project documentation
+├── app.py           # Main FastAPI app & route definitions
+├── requirements.txt # Python dependencies
+├── .gitignore       # Python gitignore
+├── LICENSE          # MIT License
+└── README.md        # Project documentation
 ```
 
 ---
@@ -158,7 +158,7 @@ Policy-Document-RAG-API/
 ## 🛠️ Tech Stack
 
 | Technology | Purpose |
-|-----------|---------|
+|------------|---------|
 | **FastAPI** | Web framework for building the API |
 | **Uvicorn** | High-performance ASGI server |
 | **RAG Pipeline** | Retrieval-Augmented Generation for Q&A |
