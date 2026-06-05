@@ -1,0 +1,30 @@
+.health-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 1rem;
+  font-size: 0.85rem;
+  gap: 1rem;
+}
+
+.health-banner--warn {
+  background: #fef3c7;
+  border-bottom: 1px solid #fbbf24;
+  color: #92400e;
+}
+
+.health-banner--ok {
+  background: #d1fae5;
+  border-bottom: 1px solid #34d399;
+  color: #065f46;
+}
+
+.health-banner__close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: inherit;
+  padding: 0;
+  line-height: 1;
+}

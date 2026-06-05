@@ -1,0 +1,43 @@
+.corpus-info {
+  padding: 0.75rem 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.corpus-info__title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #64748b;
+  margin: 0 0 0.5rem;
+}
+
+.corpus-info__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.corpus-info__item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+}
+
+.corpus-info__doc {
+  color: #1e40af;
+  font-weight: 500;
+}
+
+.corpus-info__count {
+  color: #64748b;
+}
+
+.corpus-info__empty {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin: 0;
+}

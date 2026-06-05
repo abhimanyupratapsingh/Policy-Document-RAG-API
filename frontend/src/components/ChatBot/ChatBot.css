@@ -1,0 +1,10 @@
+.chatbot-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.chatbot-wrapper > :first-child {
+  flex: 1;
+  min-height: 0;
+}
