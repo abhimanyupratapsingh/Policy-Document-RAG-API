@@ -34,7 +34,7 @@ export default function PolicyChatBot() {
   const settings = {
     general: {
       primaryColor: '#2563eb',
-      secondaryColor: '#eff6ff',
+      secondaryColor: '#1e293b',
       fontFamily: 'system-ui, sans-serif',
     },
     chatHistory: {
@@ -49,6 +49,16 @@ export default function PolicyChatBot() {
     },
     botBubble: {
       showAvatar: false,
+    },
+    botBubbleStyle: {
+      backgroundColor: '#1e293b',
+      color: '#f1f5f9',
+      borderRadius: '12px',
+    },
+    userBubbleStyle: {
+      backgroundColor: '#2563eb',
+      color: '#ffffff',
+      borderRadius: '12px',
     },
   }
 
